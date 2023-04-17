@@ -21,31 +21,10 @@ public class JwtUtils {
     private int jwtExpirationMs;
 
     public String generateToken(Authentication authentication) {
-        /*UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
-        User user = this.userRepository.findByLogin(userPrincipal.getUsername()).get();
-        UserType userType = this.userTypeRepository.findById(user.getUserType().getId()).get();
-        Sucursal sucursal = this.sucursalRepository.findById(user.getSucursal().getId()).get();*/
         Map<String, Object> claims = new HashMap<>();
         Map<String, Object> data = new HashMap<>();
-        /*$customClaims = array(
-                'name' => $user->nombre,
-                'tipo_usuario_id' => $user->tipo_usuario_id,
-                'user_id' => $user->id,
-                'login' => $user->login,
-                'sucursal_id' => $user->sucursal_id,
-                'sucursal' => $sucursal->nombre,
-                'role' => $role->nombre
-        );*/
-        /*data.put("name", user.getName());
-        data.put("tipo_usuario_id", userType.getId());
-        data.put("user_id", user.getId());
-        data.put("login", user.getLogin());
-        data.put("sucursal_id", sucursal.getId());
-        data.put("sucursal", sucursal.getName());
-        data.put("role", userType.getName());*/
         claims.put("data", data);
         return Jwts.builder()
-                //.setSubject((userPrincipal.getUsername()))
                 .setSubject(("guido"))
                 .setIssuedAt(new Date())
                 .setClaims(claims)

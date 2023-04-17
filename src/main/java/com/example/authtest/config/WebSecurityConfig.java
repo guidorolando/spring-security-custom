@@ -54,6 +54,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
         authenticationManagerBuilder.userDetailsService(this.securityUserDetails);
+        //authenticationManagerBuilder.authenticationProvider(new Provider)
     }
 
     @Bean

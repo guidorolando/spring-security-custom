@@ -14,13 +14,7 @@ public class SecurityUserDetails implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         System.out.println("Guidos test" + username);
+        //getUser from security-service   pero con password
         return CustomUserDetails.build();
     }
-
-    /*@Override
-    public UserDetails updatePassword(UserDetails user, String newPassword) {
-        System.out.println("Guidos test" + user);
-        System.out.println("Guidos test" + newPassword);
-        return this.customUserDetails;
-    }*/
 }

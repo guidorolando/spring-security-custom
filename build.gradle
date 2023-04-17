@@ -15,14 +15,13 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:3.0.3'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-tomcat'
 	implementation 'org.springframework.security.oauth:spring-security-oauth2:2.5.2.RELEASE'
-	implementation group: 'org.springframework.security', name: 'spring-security-oauth2-core', version: '6.0.2'
-	implementation group: 'org.springframework.security', name: 'spring-security-oauth2-client', version: '6.0.2'
-	implementation group: 'org.springframework.security', name: 'spring-security-oauth2-resource-server', version: '6.0.2'
-	implementation group: 'org.springframework.security', name: 'spring-security-oauth2-authorization-server', version: '1.0.1'
+	implementation group: 'org.springframework.security', name: 'spring-security-oauth2-core', version: '5.7.1'
+	implementation group: 'org.springframework.security', name: 'spring-security-oauth2-client', version: '5.7.1'
+	implementation group: 'org.springframework.security', name: 'spring-security-oauth2-resource-server', version: '5.7.1'
+	implementation group: 'org.springframework.security', name: 'spring-security-oauth2-authorization-server', version: '0.3.0'
 	implementation 'io.jsonwebtoken:jjwt:0.9.1'
 	implementation 'org.springdoc:springdoc-openapi-ui:1.6.15'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
