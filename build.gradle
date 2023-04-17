@@ -1,0 +1,34 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.6'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id('org.springdoc.openapi-gradle-plugin') version '1.6.0'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:3.0.3'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-tomcat'
+	implementation 'org.springframework.security.oauth:spring-security-oauth2:2.5.2.RELEASE'
+	implementation group: 'org.springframework.security', name: 'spring-security-oauth2-core', version: '6.0.2'
+	implementation group: 'org.springframework.security', name: 'spring-security-oauth2-client', version: '6.0.2'
+	implementation group: 'org.springframework.security', name: 'spring-security-oauth2-resource-server', version: '6.0.2'
+	implementation group: 'org.springframework.security', name: 'spring-security-oauth2-authorization-server', version: '1.0.1'
+	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.15'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
